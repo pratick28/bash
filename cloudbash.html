@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular Addition</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <style>
+         table, th , td {
+            border: 0px solid grey;
+            font-family: verdana;
+            border-collapse: collapse;
+            padding: 5px;
+         }
+         
+         table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+         }
+         
+         table tr:nth-child(even) {
+            background-color: #ffffff;
+         }
+      </style>
+</head>
+<body>
+    <div ng-app="">
+    	<table>
+    		<tr>
+
+    			<td><b>Name</b></td>
+    			<td><b>Cost</b></td>
+    			<td><b>Profit</b></td>
+    			<td><b>Fund</b></td>
+        <tr><td>Car </td>
+        <td><input type="number"  ng-model="ccost"></td>
+        <td><input type="number"  ng-model="cprofit"></td>
+        <td><input type="number"  ng-model="cfund"></td></tr>
+        <tr><td>Bike</td>
+        <td><input type="number" ng-model="bcost"></td>
+        <td><input type="number" ng-model="bprofit"></td>
+        <td><input type="number" ng-model="bfund"></td></tr>
+        <tr><td>Plane </td>
+        <td><input type="number"  ng-model="pcost"></td>
+        <td><input type="number" ng-model="pprofit"></td>
+        <td><input type="number" ng-model="pfund"></td></tr>
+        <tr><td>Yacht</td>
+        <td><input type="number" ng-model="ycost"></td>
+        <td><input type="number" ng-model="yprofit"></td>
+        <td><input type="number" ng-model="yfund"></td></tr>
+        <tr><td>Segway</td>
+        <td><input type="number" ng-model="scost"></td>
+        <td><input type="number" ng-model="sprofit"></td>
+        <td><input type="number" ng-model="sfund"></td></tr>
+        <tr><td><b>TOTAL</b> </td>
+        <td>{{ (ccost) + (bcost) + (pcost) + (ycost) + (scost)}}</td>
+        <td>{{ (cprofit) + (bprofit) + (pprofit) + (yprofit) + (sprofit)}}</td>
+        <td>{{ (cfund) + (bfund) + (pfund) + (yfund) + (sfund)}}</td></tr>
+    </table>
+    </div>
+</body>
+</html>
